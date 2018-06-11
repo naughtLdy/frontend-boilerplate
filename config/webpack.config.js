@@ -22,7 +22,6 @@ module.exports = {
       '.tsx',
       '.js',
       '.pug',
-      '.styl',
       '.css'
     ]
   },
@@ -52,36 +51,6 @@ module.exports = {
             loader: 'awesome-typescript-loader?configFileName=' + path.join(__dirname, 'tsconfig.json')
           }
         ]
-      },
-      {
-        test: /\.styl(us)?$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: true,
-                modules: true
-              }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                sourceMap: true,
-                config: {
-                  path: path.join(__dirname, 'postcss.config.js')
-                }
-              }
-            },
-            {
-              loader: 'stylus-loader',
-              options: {
-                sourceMap: true
-              }
-            }
-          ]
-        })
       }
     ]
   },
