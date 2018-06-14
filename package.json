@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist",
+    "start": "webpack-serve --config ./config/serve.config.js",
     "build": "webpack --config ./config/webpack.config.js",
-    "serve": "webpack-serve --config ./config/serve.config.js",
     "test": "jest",
     "watch:build": "webpack -w --config ./config/webpack.config.js",
     "watch:test": "jest --watch",
