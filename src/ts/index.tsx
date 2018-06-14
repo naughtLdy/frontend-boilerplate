@@ -11,7 +11,4 @@ injectGlobal`
   }
 `;
 
-ReactDom.render(
-    <App />,
-    document.getElementById('content') as HTMLElement
-);
+ReactDom.render(<App />, document.getElementById('content') as HTMLElement);
