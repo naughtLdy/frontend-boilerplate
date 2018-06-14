@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  build-and-test:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node
+    steps:
+      - checkout
+      - restore_cache:
+          key: cache-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - run:
+          name: install
+          command: yarn install
+      - save_cache:
+          key: cache-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/repo/node_modules
+      - run:
+          name: test
+          command: yarn test
+      - run:
+          name: build
+          command: yarn build
+
+workflows:
+  version: 2
+  test-and-deploy:
+    jobs:
+      - build-and-test
