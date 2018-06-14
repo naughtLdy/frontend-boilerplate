@@ -1,24 +1,17 @@
 import * as React from 'react';
 
-interface AppProps {
-}
+interface AppProps {}
 
-interface AppState {
-}
+interface AppState {}
 
 export default class App extends React.Component<AppProps, AppState> {
   constructor(props: AppProps) {
     super(props);
 
-    this.state = {
-    };
+    this.state = {};
   }
 
   render() {
-    return (
-      <div>
-        Hello World!!
-      </div>
-    );
+    return <div>Hello World!!</div>;
   }
 }

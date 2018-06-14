@@ -14,7 +14,7 @@
     "lint": "tslint -c ./config/tslint.json 'src/ts/**/*.tsx?'"
   },
   "lint-staged": {
-    "*.(js|ts(x)?)": [
+    "*.{js,ts,jsx,tsx,json,css,md}": [
       "prettier --write",
       "git add"
     ]
