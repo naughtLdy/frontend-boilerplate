@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "precommit": "lint-staged",
+    "upgrade": "ncu -u -a",
     "start": "webpack-serve --config ./config/serve.config.js",
     "build": "webpack --config ./config/webpack.config.js",
     "test": "jest",
@@ -71,6 +72,7 @@
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",
+    "npm-check-updates": "^2.14.2",
     "ts-jest": "^22.4.6",
     "tslint": "^5.10.0",
     "tslint-loader": "^3.6.0",
