@@ -40,6 +40,8 @@
   "dependencies": {
     "@types/react": "^16.3.14",
     "@types/react-dom": "^16.0.5",
+    "@types/react-redux": "^6.0.6",
+    "@types/redux": "^3.6.0",
     "autoprefixer": "^8.5.2",
     "awesome-typescript-loader": "^5.0.0",
     "css-loader": "^0.28.11",
