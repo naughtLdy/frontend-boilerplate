@@ -43,7 +43,7 @@ jobs:
           command: yarn build
       - run:
           name: github push
-          command: './script/git_push.sh'
+          command: './scripts/git_push.sh'
 
 workflows:
   version: 2
