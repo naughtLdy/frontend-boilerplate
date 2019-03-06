@@ -3,13 +3,13 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
   entry: {
-    bundle: path.join(__dirname, '..', 'src', 'ts', 'index.tsx') 
+    bundle: path.join(__dirname, '..', 'src', 'ts', 'index.tsx')
   },
   output: {
     path: path.join(__dirname, '..', 'dist'),
@@ -17,13 +17,7 @@ module.exports = {
     chunkFilename: 'static/js/[name].[hash].chunk.js'
   },
   resolve: {
-    extensions: [
-      '.ts',
-      '.tsx',
-      '.js',
-      '.pug',
-      '.css'
-    ]
+    extensions: ['.ts', '.tsx', '.js', '.pug', '.css']
   },
   module: {
     rules: [
@@ -48,7 +42,8 @@ module.exports = {
         test: /\.tsx?$/,
         use: [
           {
-            loader: 'awesome-typescript-loader?configFileName=' + path.join(__dirname, 'tsconfig.json')
+            loader:
+              'ts-loader?configFile=' + path.join(__dirname, 'tsconfig.json')
           }
         ]
       }
@@ -62,4 +57,4 @@ module.exports = {
       filename: 'css/[name].[chunkhash:8].css'
     })
   ]
-}
+};
