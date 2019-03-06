@@ -3,7 +3,7 @@ jobs:
   build-and-test:
     working_directory: ~/repo
     docker:
-      - image: circleci/node
+      - image: circleci/node:10
     steps:
       - checkout
       - restore_cache:
@@ -24,7 +24,7 @@ jobs:
   npm-upgrade:
     working_directory: ~/repo
     docker:
-      - image: circleci/node
+      - image: circleci/node:10
     steps:
       - checkout
       - restore_cache:
