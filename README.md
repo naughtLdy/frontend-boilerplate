@@ -10,17 +10,17 @@
 ### Install
 
 ```sh
-yarn install
+npm ci
 ```
 
 ### Start
 
 ```sh
-yarn start  # Start localhost:8080
+npm run start  # Start localhost:8080
 ```
 
 ### Build
 
 ```sh
-yarn build
+npm run build
 ```
