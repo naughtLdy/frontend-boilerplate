@@ -16,14 +16,6 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true
   },
-  "include": [
-    "./**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "dist",
-    "scripts",
-    "webpack",
-  ]
+  "include": ["../**/*"],
+  "exclude": ["node_modules", "build", "dist", "scripts", "webpack"]
 }
