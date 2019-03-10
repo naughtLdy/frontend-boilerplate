@@ -1,17 +1,12 @@
 import * as React from 'react';
+import Todo from '../templates/Todo';
 
 interface AppProps {}
 
 interface AppState {}
 
 export default class App extends React.Component<AppProps, AppState> {
-  constructor(props: AppProps) {
-    super(props);
-
-    this.state = {};
-  }
-
   render() {
-    return <div>Hello World!!</div>;
+    return <Todo />;
   }
 }

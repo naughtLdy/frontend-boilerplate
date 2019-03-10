@@ -16,7 +16,7 @@ npm ci
 ### Start
 
 ```sh
-npm run start  # Start localhost:8080
+npm run dev  # Start localhost:8080
 ```
 
 ### Build
