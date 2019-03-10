@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import todos from './reducers/todos';
+import todos from './reducers/Todos';
 import State from './states';
 
 /**
