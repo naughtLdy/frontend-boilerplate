@@ -1,5 +1,9 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "extends": ["config:base"],
+  "dependencies": {
+    "extends": [":labels(Renovate, dependencies)"]
+  },
+  "devDependencies": {
+    "extends": [":labels(Renovate, devDependencies)"]
+  }
 }
