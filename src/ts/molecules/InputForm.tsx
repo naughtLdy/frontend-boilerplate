@@ -27,9 +27,7 @@ const InputForm = (props: FormProps) => (
         value={props.input}
         onChange={props.onInputChange}
       />
-      <ButtonComponent type="submit" {...props}>
-        Add Todo
-      </ButtonComponent>
+      <ButtonComponent type="submit">Add Todo</ButtonComponent>
     </Wrapper>
   </form>
 );
