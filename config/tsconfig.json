@@ -16,7 +16,6 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "typeRoots": ["node_modules/@types", "node_modules/jest-enzyme"],
     "types": ["jest"],
     "esModuleInterop": true
   },
