@@ -6,7 +6,7 @@ import State from './states';
  * 初期State
  */
 const initialState: State = {
-  todoList: []
+  todoList: [],
 };
 
 /**
