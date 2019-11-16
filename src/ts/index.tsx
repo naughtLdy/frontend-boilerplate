@@ -1,5 +1,5 @@
-import * as React from 'react';
-import * as ReactDom from 'react-dom';
+import React from 'react';
+import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
 import { createGlobalStyle } from 'styled-components';
 import App from './pages/App';
@@ -22,5 +22,5 @@ ReactDom.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('content') as HTMLElement
+  document.getElementById('content') as HTMLElement,
 );

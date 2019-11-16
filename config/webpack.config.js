@@ -9,15 +9,15 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   entry: {
-    bundle: path.join(__dirname, '..', 'src', 'ts', 'index.tsx')
+    bundle: path.join(__dirname, '..', 'src', 'ts', 'index.tsx'),
   },
   output: {
     path: path.join(__dirname, '..', 'dist'),
     filename: 'js/[name].[hash].js',
-    chunkFilename: 'static/js/[name].[hash].chunk.js'
+    chunkFilename: 'static/js/[name].[hash].chunk.js',
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.pug', '.css']
+    extensions: ['.ts', '.tsx', '.js', '.pug', '.css'],
   },
   module: {
     rules: [
@@ -25,36 +25,38 @@ module.exports = {
         test: /\.pug$/,
         use: [
           {
-            loader: 'pug-loader'
-          }
-        ]
+            loader: 'pug-loader',
+          },
+        ],
       },
       {
         test: /\.js$/,
         enforce: 'pre',
         use: [
           {
-            loader: 'source-map-loader'
-          }
-        ]
+            loader: 'source-map-loader',
+          },
+        ],
       },
       {
         test: /\.tsx?$/,
         use: [
           {
-            loader:
-              'ts-loader?configFile=' + path.join(__dirname, 'tsconfig.json')
-          }
-        ]
-      }
-    ]
+            loader: 'ts-loader',
+            options: {
+              configFile: path.join(__dirname, 'tsconfig.json'),
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, '..', 'src', 'pug', 'index.pug')
+      template: path.join(__dirname, '..', 'src', 'pug', 'index.pug'),
     }),
     new ExtractTextPlugin({
-      filename: 'css/[name].[chunkhash:8].css'
-    })
-  ]
+      filename: 'css/[name].[chunkhash:8].css',
+    }),
+  ],
 };

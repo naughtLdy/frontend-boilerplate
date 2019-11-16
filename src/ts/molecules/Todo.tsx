@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { default as TodoListComponent } from '../atoms/TodoList';
 import { default as TodoComponent } from '../atoms/Todo';
 import { TodoList } from '../states/TodoState';

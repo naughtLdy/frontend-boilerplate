@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { default as TodoListComponent } from '../molecules/Todo';
@@ -25,7 +25,7 @@ interface DispatchFromProps {
 
 function mapStateToProps(state: States): StateFromProps {
   return {
-    todos: state.todoList
+    todos: state.todoList,
   };
 }
 
@@ -33,11 +33,11 @@ function mapDispatchToProps(dispatch: Dispatch<TodoAction>): DispatchFromProps {
   return {
     onTodoClick: (id: number) => {
       dispatch(toggleTodo(id));
-    }
+    },
   };
 }
 
 export default connect<StateFromProps, DispatchFromProps, {}>(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(TodoList);

@@ -9,6 +9,6 @@ module.exports = merge(baseConfig, {
     port: 8080,
     open: true,
     hot: true,
-    logLevel: 'debug'
-  }
+    logLevel: 'debug',
+  },
 });
