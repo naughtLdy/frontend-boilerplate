@@ -12,7 +12,7 @@ function generateTodo(text: string, id: number): Todo {
   return {
     id: id,
     completed: false,
-    text: text
+    text: text,
   };
 }
 

@@ -10,15 +10,15 @@ function todos(state: State, action: TodoAction): State {
           {
             id: action.id,
             text: action.text,
-            completed: false
-          }
-        ]
+            completed: false,
+          },
+        ],
       };
     case TodoActionType.TOGGLE_TODO:
       return {
         todoList: state.todoList.map((todo) =>
-          todo.id == action.id ? { ...todo, completed: !todo.completed } : todo
-        )
+          todo.id == action.id ? { ...todo, completed: !todo.completed } : todo,
+        ),
       };
 
     default:
