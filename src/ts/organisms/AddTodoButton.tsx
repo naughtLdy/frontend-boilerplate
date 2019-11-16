@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { addTodo, TodoAction } from '../actions';
@@ -20,7 +20,7 @@ class AddButton extends React.Component<
   constructor(props: AddTodoButtonProps) {
     super(props);
     this.state = {
-      input: ''
+      input: '',
     };
   }
 
@@ -33,13 +33,13 @@ class AddButton extends React.Component<
 
     this.props.onSubmit(this.state.input);
     this.setState({
-      input: ''
+      input: '',
     });
   };
 
   onInputChange = (e: React.FormEvent<HTMLInputElement>): void => {
     this.setState({
-      input: e.currentTarget.value
+      input: e.currentTarget.value,
     });
   };
 
@@ -59,16 +59,16 @@ function mapStateToProps(state: State): {} {
 }
 
 function mapDispatchToProps(
-  dispatch: Dispatch<TodoAction>
+  dispatch: Dispatch<TodoAction>,
 ): AddTodoButtonProps {
   return {
     onSubmit: (s: string) => {
       dispatch(addTodo(s));
-    }
+    },
   };
 }
 
 export default connect<{}, AddTodoButtonProps, {}>(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(AddButton);

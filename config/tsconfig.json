@@ -5,6 +5,7 @@
     "lib": ["es6", "dom"],
     "sourceMap": true,
     "allowJs": false,
+    "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "moduleResolution": "node",
     "rootDir": "../src/ts",
@@ -16,7 +17,8 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "typeRoots": ["node_modules/@types", "node_modules/jest-enzyme"],
-    "types": ["jest"]
+    "types": ["jest"],
+    "esModuleInterop": true
   },
   "include": ["../**/*"],
   "exclude": ["node_modules", "build", "dist", "scripts", "webpack"]
