@@ -25,45 +25,8 @@ jobs:
           name: build
           command: npm run build
 
-  npm-upgrade:
-    working_directory: ~/repo
-    docker:
-      - image: circleci/node:12
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - npm-cache-{{ arch }}-{{ .Branch }}-{{ checksum "package-lock.json" }}
-            - npm-cache-{{ arch }}-{{ .Branch }}
-            - npm-cache
-      - run:
-          name: install
-          command: npm ci
-      - run:
-          name: upgrade
-          command: npm run upgrade
-      - run:
-          name: test
-          command: npm test
-      - run:
-          name: build
-          command: npm build
-      - run:
-          name: github push
-          command: './scripts/git_push.sh'
-
 workflows:
   version: 2
   test-and-deploy:
     jobs:
       - build-and-test
-  upgrade:
-    jobs:
-      - npm-upgrade
-    triggers:
-      - schedule:
-          cron: "00 1 * * 1" # 毎週月曜日
-          filters:
-            branches:
-              only:
-                - master
