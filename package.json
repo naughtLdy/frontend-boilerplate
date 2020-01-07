@@ -33,7 +33,7 @@
     "@types/react-dom": "16.9.4",
     "@types/react-native": "0.60.22",
     "@types/react-redux": "7.1.5",
-    "@types/styled-components": "4.4.0",
+    "@types/styled-components": "4.4.2",
     "autoprefixer": "9.7.2",
     "css-loader": "3.2.0",
     "cssnano": "4.1.10",
