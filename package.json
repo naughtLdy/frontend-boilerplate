@@ -31,7 +31,7 @@
   "dependencies": {
     "@types/react": "16.9.11",
     "@types/react-dom": "16.9.4",
-    "@types/react-native": "0.60.22",
+    "@types/react-native": "0.61.12",
     "@types/react-redux": "7.1.5",
     "@types/styled-components": "4.4.0",
     "autoprefixer": "9.7.2",
