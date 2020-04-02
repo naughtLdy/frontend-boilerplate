@@ -72,7 +72,7 @@
     "jest-enzyme": "7.1.2",
     "lint-staged": "9.5.0",
     "ts-jest": "24.2.0",
-    "tslint": "5.20.1",
+    "tslint": "6.1.1",
     "tslint-loader": "3.5.4",
     "tslint-react": "4.1.0",
     "webpack-dev-server": "3.10.1"
